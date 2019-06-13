@@ -1,12 +1,61 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Девайс</title>
-  </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
-
-  </body>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML Academy: Девайс</title>
+        <link href="css/normalize.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header class="main-header container">
+            <a class="logo">
+                <img src="img/device.svg" width="163" height="35" alt="DEVICE">
+            </a>
+            <div class="header-actions">
+                <div class="column">
+                    <form action="" class="search">
+                        <input type="search" placeholder="Поиск по сайту">
+                        <button type="submit">Найти</button>
+                    </form>
+                </div>
+                <div class="column profile-actions">
+                    <a href="" class="enter icon">Войти</a>
+                    <a href="" class="compare icon">Сравнить</a>
+                    <a href="" class="cart icon">Корзина</a>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul class="menu-toggle column">
+                    <li class="text-desc">
+                        Каталог товаров
+                        <ul class="expanded-menu">
+                            <li>
+                                <ul>
+                                    <li><a href="">Виртуальная реальность</a></li>
+                                    <li><a href="">Моноподы для селфи</a></li>
+                                    <li><a href="">Экшн-камеры</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li><a href="">Фитнес-браслеты</a></li>
+                                    <li><a href="">Умные часы</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li><a href="">Квадрокоптеры</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="site-nav column">
+                    <li><a href="" class="text-desc">Доставка</a></li>
+                    <li><a href="" class="text-desc">Гарантия</a></li>
+                    <li><a href="" class="text-desc">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
+    </body>
 </html>

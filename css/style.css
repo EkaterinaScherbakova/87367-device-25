@@ -1,0 +1,250 @@
+@font-face {
+    font-family: 'Open Sans Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('OpenSans-Light'),
+        url('../fonts/opensans-light.woff2') format('woff2'),
+        url('../fonts/opensans-light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Gilroy ExtraBold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Gilroy-ExtraBold'),
+        url('../fonts/gilroyextrabold-webfont.woff2') format('woff2'),
+        url('../fonts/gilroyextrabold-webfont.woff') format('woff');
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    min-width: 1160px;
+    margin: 0;
+    padding: 0;
+
+    font-family: "Open Sans Light", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: 0.2px;
+    color: #000000;
+
+    background-color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+    width: 1160px;
+    margin: 0 auto;
+}
+
+.text-desc {
+    font-family: "Gilroy ExtraBold", Arial, sans-serif;
+    font-size: 18px;
+    letter-spacing: 3.6px;
+    line-height: 24px;
+    color: inherit;
+    text-transform: uppercase;
+}
+
+.icon {
+    position: relative;
+}
+
+.icon::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin: auto 0;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.main-header {
+    min-height: 186px;
+    padding: 21px 61px 56px 60px;
+    background-image: linear-gradient(#ffffff 40px, #F7E397 40px);
+}
+
+.main-header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-header .logo {
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+.logo:hover,
+.logo:focus {
+    opacity: 0.6;
+}
+
+.logo:active {
+    opacity: 0.3;
+}
+
+.header-actions {
+    display: flex;
+}
+
+.column {
+    width: 50%;
+}
+
+.search {
+    position: relative;
+    display: flex;
+    margin-right: 140px;
+}
+
+.search input {
+    flex-grow: 1;
+    padding-left: 38px;
+
+    line-height: 49px;
+
+    background-color: transparent;
+    background-image: url("../img/icons/search.svg");
+    background-repeat: no-repeat;
+    background-position: 3px 19px;
+    border: none;
+}
+
+.search input:focus {
+    outline: none;
+}
+
+.search input::placeholder {
+    color: #0000004c;
+    opacity: 0.3;
+}
+
+.search button {
+    display: none;
+    line-height: 45px;
+    padding: 0 21px;
+    background-color: transparent;
+    border: 2px solid #000000;
+}
+
+.search button:hover,
+.search button:focus {
+    color: #ffffff;
+
+    background-color: #000000;
+    outline: none;
+}
+
+.search button:active {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.search button::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border: 1px solid #000000;
+    background-color: #000000;
+}
+
+.search:focus-within button {
+    display: inline-block;
+}
+
+.profile-actions {
+    display: flex;
+    padding: 12px 0 12px 20px;
+}
+
+.profile-actions a {
+    color: #000000;
+    margin-left: 39px;
+    padding-left: 26px;
+}
+
+.profile-actions a:first-child {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.profile-actions .enter::before {
+    top: -3px;
+    left: 0px;
+    background-image: url("../img/icons/user.svg")
+}
+
+.profile-actions .compare::before {
+    top: -2px;
+    left: 4px;
+    background-image: url("../img/icons/compare.svg")
+}
+
+.profile-actions .cart::before {
+    top: -3px;
+    left: 2px;
+    background-image: url("../img/icons/cart.svg")
+}
+
+.main-nav {
+    display: flex;
+    padding-top: 25px;
+}
+
+.expanded-menu {
+    display: none;
+}
+
+.main-header .site-nav {
+    display: flex;
+    padding-left: 20px;
+}
+
+.site-nav li {
+    margin-right: 36px;
+}
+
+.site-nav li:last-child {
+    margin-right: 0;
+    margin-left: auto;
+}
