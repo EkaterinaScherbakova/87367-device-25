@@ -90,6 +90,7 @@ input[type="radio"].visually-hidden {
     letter-spacing: 3.6px;
     line-height: 24px;
     color: inherit;
+    text-align: center;
 
     text-decoration: none;
     text-transform: uppercase;
@@ -477,6 +478,10 @@ input[name="main-slider"]:checked ~ .slide {
     letter-spacing: 0.4px;
 }
 
+.categories-container {
+    margin-bottom: 60px;
+}
+
 .categories {
     display: flex;
     justify-content: space-between;
@@ -524,3 +529,82 @@ input[name="main-slider"]:checked ~ .slide {
 .categories b {
     display: block;
 }
+
+
+.services {
+    min-height: 288px;
+    background-image: linear-gradient(#ffffff 120px, #e5e5e5 120px);
+}
+
+.services .container {
+    padding-top: 100px;
+}
+
+.services-slider {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.services-slider::after {
+    content: "";
+    position: absolute;
+    top: -79px;
+    left: 277px;
+    width: 7px;
+    height: 319px;
+    background-color: #000000;
+}
+
+.services-slider li {
+    width: 278px;
+    margin-bottom: 25px;
+}
+
+.services-slider .btn {
+    min-width: 160px;
+    padding: 0 25px;
+}
+
+.services-slider p {
+    width: 436px;
+}
+
+.services-slider section {
+    position: absolute;
+    top: -94px;
+    right: 0;
+    left: 320px;
+    display: none;
+    min-height: 280px;
+
+    background-repeat: no-repeat;
+    background-position: right 20px;
+}
+
+.delivery section {
+    background-image: url("../img/services/delivery.svg");
+}
+
+.warranty section {
+    background-image: url("../img/services/warranty.svg");
+}
+
+.credit section {
+    background-image: url("../img/services/credit.svg");
+}
+
+input[name="services"]:checked + label {
+    width: 100%;
+    text-align: left;
+    color: #f7e184;
+
+    background-image: none;
+    background-color: #000000;
+}
+
+input[name="services"]:checked ~ section {
+    display: block;
+}
+
