@@ -67,7 +67,7 @@
                             <div class="column img-container">
                                 <img src="img/sliders/slider-1-png.png" alt="Селфи-палка">
                             </div>
-                            <div class="column">
+                            <div class="column-right">
                                 <h2 class="title">
                                     Делай селфи,<br>
                                     как Бен Стиллер!
@@ -99,7 +99,7 @@
                             <div class="column  img-container">
                                 <img src="img/sliders/slider-2-png.png" alt="фитнес-браслет">
                             </div>
-                            <div class="column">
+                            <div class="column-right">
                                 <h2 class="title">
                                     Худеем<br>
                                     правильно!
@@ -127,7 +127,7 @@
                             <div class="column  img-container">
                                 <img src="img/sliders/slider-3-png.png" alt="Квадрокоптер">
                             </div>
-                            <div class="column">
+                            <div class="column-right">
                                 <h2 class="title">
                                     Порхает как бабочка,<br>
                                     жалит как пчела!
@@ -209,28 +209,28 @@
                 <div class="container">
                     <h2 class="visually-hidden">Сервисы</h2>
                     <ul class="services-slider">
-                        <li class="services-slider-item delivery active">
+                        <li class="active">
                             <input class="visually-hidden" type="radio" name="services" value="delivery" id="delivery" checked>
-                            <label for="delivery" class="btn">Доставка</label>
-                            <section>
+                            <label for="delivery"><span class="btn">Доставка</span></label>
+                            <section class="services-slide slide-delivery">
                                 <h3 class="title">Доставка</h3>
                                 <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
                             </section>
                         </li>
-                        <li class="services-slider-item warranty">
+                        <li>
                             <input class="visually-hidden" type="radio" name="services" value="warranty" id="warranty">
-                            <label for="warranty" class="btn">Гарантия</label>
-                            <section>
+                            <label for="warranty"><span class="btn">Гарантия</span></label>
+                            <section class="services-slide slide-warranty">
                                 <h3 class="title">Гарантия</h3>
                                 <p>Если из-за возгорания купленного у нас товара
                                     у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
                                     Товар, не дом, конечно же.</p>
                             </section>
                         </li>
-                        <li class="services-slider-item credit">
+                        <li>
                             <input class="visually-hidden" type="radio" name="services" value="credit" id="credit">
-                            <label for="credit" class="btn">Кредит</label>
-                            <section>
+                            <label for="credit"><span class="btn">Кредит</span></label>
+                            <section class="services-slide slide-credit">
                                 <h3 class="title">Кредит</h3>
                                 <p>Залезть в долговую яму стало проще! Кредитные
                                     консультанты подберут для вас наиболее выгодные
@@ -240,6 +240,110 @@
                     </ul>
                 </div>
             </section>
+            <section class="brands container">
+                <h2 class="visually-hidden">Производители</h2>
+                <ul class="brands-list">
+                    <li class="brands-item">
+                        <a href="">
+                            <img src="img/brands/logo-1-jpg.jpg" width="260" height="100" alt="DJI" class="brand-grey">
+                            <img src="img/brands/logo-1-color-jpg.jpg" width="260" height="100" alt="DJI" class="brand-color">
+                        </a>
+                    </li>
+                    <li class="brands-item">
+                        <a href="">
+                            <img src="img/brands/logo-2-jpg.jpg" width="260" height="100" alt="SP Gadgets" class="brand-grey">
+                            <img src="img/brands/logo-2-color-jpg.jpg" width="260" height="100" alt="SP Gadgets" class="brand-color">
+                        </a>
+                    </li>
+                    <li class="brands-item">
+                        <a href="">
+                            <img src="img/brands/logo-3-jpg.jpg" width="260" height="100" alt="GoPro" class="brand-grey">
+                            <img src="img/brands/logo-3-color-jpg.jpg" width="260" height="100" alt="GoPro" class="brand-color">
+                        </a>
+                    </li>
+                    <li class="brands-item">
+                        <a href="">
+                            <img src="img/brands/logo-4-jpg.jpg" width="260" height="100" alt="VIVE" class="brand-grey">
+                            <img src="img/brands/logo-4-color-jpg.jpg" width="260" height="100" alt="VIVE" class="brand-color">
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <div class="info container">
+                <section class="about-us column">
+                    <h2 class="title">О нас</h2>
+                    <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+                    <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+                    <ul class="info-list">
+                        <li class="icon">Деловые Линии</li>
+                        <li class="icon">Автотрейдинг</li>
+                        <li class="icon">ЖелДорЭкспедиция</li>
+                    </ul>
+                    <a href="" class="btn">Подробнее о нас</a>
+                </section>
+                <section class="contacts column-right">
+                    <h2 class="title">Контакты</h2>
+                    <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+                    <img class="map" src="img/map-jpg.jpg" width="560" height="222" alt="карта">
+                    <a href="" class="btn">Напишите нам</a>
+                </section>
+            </div>
         </main>
+        <footer class="main-footer">
+            <div class="footer-top container">
+                <a class="logo">
+                    <img src="img/device-yellow.svg" width="163" height="35" alt="DEVICE">
+                </a>
+                <div class="profile-actions footer-actions">
+                    <a href="" class="enter icon"><span>Войти</span></a>
+                    <a href="" class="compare icon"><span>Сравнить</span></a>
+                    <a href="" class="cart icon"><span>Корзина</span></a>
+                </div>
+            </div>
+            <div class="footer-middle container">
+                <address>г. Москва, ул. Строителей, 15</address>
+                <ul class="site-nav">
+                    <li><a href="" class="text-desc-upper">Доставка</a></li>
+                    <li><a href="" class="text-desc-upper">Гарантия</a></li>
+                    <li><a href="" class="text-desc-upper">Контакты</a></li>
+                </ul>
+                <a class="phone" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
+            </div>
+            <div class="footer-bottom icon container">
+                <ul class="socials">
+                    <li><a href="" class="fb" target="_blank">facebook</a></li>
+                    <li><a href="" class="insta" target="_blank">insta</a></li>
+                    <li><a href="" class="twitter" target="_blank">twitter</a></li>
+                </ul>
+                <a href="https://htmlacademy.ru/" target="_blank" class="development"></a>
+            </div>
+        </footer>
+
+        <section class="modal modal-communication">
+            <h2 class="visually-hidden">Обратная связь</h2>
+            <form class="form-communication">
+                <div class="input-wrapper">
+                    <label for="name" class="text-desc">Ваше имя:</label>
+                    <input type="text" name="name" id="name" placeholder="Имя Фамилия">
+                </div>
+                <div class="input-wrapper">
+                    <label for="email" class="text-desc">Ваш e-mail:</label>
+                    <input type="text" name="email" id="email" placeholder="email@example.com">
+                </div>
+                <label for="letter" class="text-desc">Текст письма:</label>
+                <textarea id="letter" placeholder="В свободной форме"></textarea>
+                <button class="btn" type="submit">Отправить</button>
+            </form>
+            <button class="modal-close" type="button">
+                Закрыть
+            </button>
+        </section>
+
+        <section class="modal modal-map">
+            <h2 class="visually-hidden">Как до нас добраться</h2>
+            <button class="modal-close" type="button">
+                Закрыть
+            </button>
+        </section>
     </body>
 </html>
