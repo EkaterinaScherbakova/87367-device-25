@@ -53,7 +53,7 @@
                 <ul class="site-nav column">
                     <li><a href="" class="text-desc-upper">Доставка</a></li>
                     <li><a href="" class="text-desc-upper">Гарантия</a></li>
-                    <li><a href="" class="text-desc-upper">Контакты</a></li>
+                    <li><a href="#contacts" class="text-desc-upper">Контакты</a></li>
                 </ul>
             </nav>
         </header>
@@ -76,7 +76,7 @@
                                     Самая длинная палка для селфи доступна в нашем магазине.<br>
                                     Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
                                 </p>
-                                <a href="" class="btn">Подробнее</a>
+                                <a href="catalog.html" class="btn">Подробнее</a>
                                 <table>
                                     <tr>
                                         <td>8,5 м</td>
@@ -281,11 +281,11 @@
                     </ul>
                     <a href="" class="btn">Подробнее о нас</a>
                 </section>
-                <section class="contacts column-right">
+                <section id="contacts" class="contacts column-right">
                     <h2 class="title">Контакты</h2>
                     <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-                    <img class="map" src="img/map-jpg.jpg" width="560" height="222" alt="карта">
-                    <a href="" class="btn">Напишите нам</a>
+                    <img id="map-link" class="map" src="img/map-jpg.jpg" width="560" height="222" alt="карта">
+                    <a id="contact-us-button" href="" class="btn">Напишите нам</a>
                 </section>
             </div>
         </main>
@@ -305,7 +305,7 @@
                 <ul class="site-nav">
                     <li><a href="" class="text-desc-upper">Доставка</a></li>
                     <li><a href="" class="text-desc-upper">Гарантия</a></li>
-                    <li><a href="" class="text-desc-upper">Контакты</a></li>
+                    <li><a href="#contacts" class="text-desc-upper">Контакты</a></li>
                 </ul>
                 <a class="phone" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
             </div>
@@ -319,7 +319,7 @@
             </div>
         </footer>
 
-        <section class="modal modal-communication">
+        <section id="contact-us-modal" class="modal modal-communication">
             <h2 class="visually-hidden">Обратная связь</h2>
             <form class="form-communication">
                 <div class="input-wrapper">
@@ -339,11 +339,13 @@
             </button>
         </section>
 
-        <section class="modal modal-map">
+        <section id="map-modal" class="modal modal-map">
             <h2 class="visually-hidden">Как до нас добраться</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" allowfullscreen></iframe>
             <button class="modal-close" type="button">
                 Закрыть
             </button>
         </section>
+        <script src="js/scripts.js"></script>
     </body>
 </html>
