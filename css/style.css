@@ -1308,10 +1308,11 @@ input[name="services"]:checked ~ .services-slide {
     padding-top: 23px;
 }
 
-.item-desc span {
+.item-desc .price {
     margin-top: -3px;
 
-    font-size: 16px;
+    font-family: "Gilroy Light", Arial, sans-serif;
+    font-size: 15px;
     color: #464646;
     white-space: nowrap;
 }
