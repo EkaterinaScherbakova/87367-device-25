@@ -49,11 +49,6 @@ body {
     background-color: #ffffff;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -337,25 +332,12 @@ input[type="radio"].visually-hidden {
     color: rgba(255, 255, 255, 0.3);
 }
 
-/* .search:focus-within button {
-    display: inline-block;
-    vertical-align: top;
-}
-
-.search:focus-within input {
-    border-bottom: 2px solid #000000;
-} */
-
 .search input:focus + button,
 .search button:hover,
 .search button:focus {
     display: inline-block;
     vertical-align: top;
 }
-
-/* .search input:focus {
-    border-bottom: 2px solid #000000;
-} */
 
 .search input:focus + button::before,
 .search button:hover::before,
@@ -365,7 +347,7 @@ input[type="radio"].visually-hidden {
     right: 0;
     bottom: 0;
     width: 100%;
-    
+
     border: 1px solid black;
 }
 
@@ -1513,6 +1495,14 @@ outline: none;
     outline: 2px solid #ffc600;
 }
 
+.item-img {
+    position: relative;
+}
+
+.item-img img {
+    vertical-align: top;
+}
+
 .item-desc {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1537,37 +1527,31 @@ outline: none;
     margin: 0;
 }
 
-.item .actions {
+.item .actions-overlay {
     position: absolute;
     top: 0;
+    bottom: 0;
     left: 0;
+    right: 0;
     z-index: 10;
 
     display: none;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 100%;
-    height: 379px;
-    padding: 40px 0 20px;
 
-    background-color: rgba(238, 238, 238, 0.7)
+    background-color: rgba(238, 238, 238, 0.7);
 }
 
-.item:hover .actions {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+.item:hover .actions-overlay {
+    display: block;
 }
 
-.item:focus-within .actions {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+.item:focus-within .actions-overlay {
+    display: block;
+}
+
+.actions-overlay .actions {
+    margin-top: 160px;
+
+    text-align: center;
 }
 
 .actions .to-cart {
@@ -1576,6 +1560,7 @@ outline: none;
 }
 
 .actions .to-compare {
+    display: block;
     margin: 0 auto;
 
     font-size: 13px;
