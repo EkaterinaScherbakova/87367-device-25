@@ -531,11 +531,14 @@ input[name="main-slider"]:checked ~ .slide {
     position: absolute;
     top: 329px;
     right: 93px;
+
     display: block;
     width: 13px;
     height: 13px;
+
     border: 1px solid #000000;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .main-slider label[for="selfie-stick"] {
@@ -544,6 +547,11 @@ input[name="main-slider"]:checked ~ .slide {
 
 .main-slider label[for="fitness-bracelet"] {
     right: 126px;
+}
+
+.main-slider input[type="radio"]:focus + label {
+    -webkit-box-shadow: 0 0 3px 2px #ffc600;
+            box-shadow: 0 0 3px 2px #ffc600;
 }
 
 .main-slider input[type="radio"]:checked + label::before {
@@ -604,17 +612,10 @@ input[name="main-slider"]:checked ~ .slide {
     letter-spacing: 0.4px;
 }
 
-.categories-container {
-    margin-bottom: 60px;
-}
-
 .categories {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     margin: 0;
     padding: 0;
 
@@ -630,6 +631,12 @@ input[name="main-slider"]:checked ~ .slide {
 
 .categories li {
     width: 160px;
+    margin-right: 40px;
+    margin-bottom: 60px;
+}
+
+.categories li:nth-child(6n) {
+    margin-right: 0;
 }
 
 .categories .category {
@@ -772,15 +779,20 @@ input[name="services"]:checked ~ .services-slide {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     margin: 0;
     padding: 0;
 
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     list-style: none;
+}
+
+.brands-list li {
+    margin-right: 40px;
+}
+
+.brands-list li:nth-child(4n) {
+    margin-right: 0px;
 }
 
 .brand-color {
@@ -862,6 +874,10 @@ outline: none;
     margin: 37px 0 59px;
 
     cursor: pointer;
+}
+
+.info .map:focus {
+    outline: 2px solid #ffc600;
 }
 
 .contacts .btn {
@@ -1676,8 +1692,13 @@ li.next-page a {
     opacity: 1;
 }
 
-.next-page:hover,
-.prev-page:hover {
+.next-page a:hover,
+.prev-page a:hover {
+    background-color: #d9d9d9;
+}
+
+.next-page a:focus,
+.prev-page a:focus {
     background-color: #d9d9d9;
 }
 
