@@ -70,9 +70,9 @@ input[type="radio"].visually-hidden {
 }
 
 .container {
-    width: 1180px;
+    width: 1160px;
     margin: 0 auto;
-    padding: 0 10px;
+    /* padding: 0 10px; */
 }
 
 
@@ -168,8 +168,9 @@ input[type="radio"].visually-hidden {
     content: "NEW";
 
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 30px;
+    right: 28px;
+    z-index: 10;
 
     width: 60px;
     height: 60px;
@@ -197,7 +198,7 @@ input[type="radio"].visually-hidden {
 .main-header {
     position: relative;
     min-height: 186px;
-    padding: 21px 70px 48px 70px;
+    padding: 21px 60px 48px;
     background-image: -webkit-linear-gradient(#ffffff 40px, #F7E397 40px);
     background-image: -o-linear-gradient(#ffffff 40px, #F7E397 40px);
     background-image: linear-gradient(#ffffff 40px, #F7E397 40px);
@@ -560,7 +561,7 @@ input[name="main-slider"]:checked ~ .slide {
 .slide::before {
     position: absolute;
     top: -10px;
-    right: 74px;
+    right: 65px;
     width: 166px;
     height: 131px;
 
@@ -616,6 +617,8 @@ input[name="main-slider"]:checked ~ .slide {
             justify-content: space-between;
     margin: 0;
     padding: 0;
+
+    flex-wrap: wrap;
     list-style: none;
 }
 
@@ -774,6 +777,7 @@ input[name="services"]:checked ~ .services-slide {
     margin: 0;
     padding: 0;
 
+    flex-wrap: wrap;
     list-style: none;
 }
 
@@ -806,6 +810,8 @@ outline: none;
 }
 
 .info .title::before {
+    top: -49px;
+
     width: 80px;
 
     background-color: #000000;
@@ -851,7 +857,7 @@ outline: none;
 
 .info .map {
     display: block;
-    margin: 37px 0 70px;
+    margin: 37px 0 59px;
 
     cursor: pointer;
 }
@@ -866,6 +872,15 @@ outline: none;
 
     color: #ffffff;
     background-color: #464646;
+}
+
+.main-footer .logo[href]:hover,
+.main-footer .logo[href]:focus {
+    opacity: 0.6;
+}
+
+.main-footer .logo[href]:active {
+    opacity: 0.3;
 }
 
 .main-footer a {
@@ -976,7 +991,6 @@ outline: none;
 }
 
 .footer-bottom::before {
-    left: 10px;
     width: 80px;
     height: 7px;
 
@@ -1057,7 +1071,7 @@ outline: none;
 }
 
 .catalog-main .title {
-    margin: 35px 60px 15px;
+    margin: 33px 60px 15px;
 }
 
 .catalog-main .title:before {
@@ -1174,8 +1188,7 @@ outline: none;
     background-image: linear-gradient(to right, #91c92f 110px, #D8DDDF 110px);
 }
 
-.range-line::before,
-.range-line::after {
+.range-button {
     content: "";
     position: absolute;
     top: 50%;
@@ -1186,14 +1199,30 @@ outline: none;
     display: block;
     width: 20px;
     height: 20px;
+    padding: 0;
 
     background-color: #ACADAD;
     border: 8px solid #ffffff;
     border-radius: 50%;
+    box-shadow: 0px 1px #D9D9D9;
 }
 
-.range-line::after {
+.range-button-to {
     left: 54%
+}
+
+.range-button:focus:not(:active) {
+    outline: none;
+    box-shadow: 0 0 3px 1px #ffc600;
+}
+
+.range-button:active {
+    width: 22px;
+    height: 22px;
+
+    border: 9px solid #ffffff;
+    outline: none;
+
 }
 
 .range-output input {
@@ -1350,7 +1379,7 @@ outline: none;
 .bluetooth-radio input[type="radio"]:focus + .radio-indicator {
     -webkit-box-shadow: 0 0 4px 2px #ffc600;
             box-shadow: 0 0 4px 2px #ffc600;
-  }
+          }
 
   .filter .btn {
     padding: 0 40px;
@@ -1478,7 +1507,6 @@ outline: none;
         flex-wrap: wrap;
 
     margin: 0;
-    margin-bottom: 10px;
     padding: 0;
 
     list-style: none;
@@ -1511,15 +1539,17 @@ outline: none;
         -ms-flex-pack: justify;
             justify-content: space-between;
 
-    padding-top: 23px;
+    padding-top: 32px;
 }
 
 .item-desc .price {
-    margin-top: -3px;
+    margin-top: -2px;
 
     font-family: "Gilroy Light", Arial, sans-serif;
     font-size: 15px;
+    letter-spacing: 0.8px;
     color: #464646;
+
     white-space: nowrap;
 }
 
@@ -1587,6 +1617,7 @@ outline: none;
     display: -ms-flexbox;
     display: flex;
     margin: 0;
+    margin-top: -8px;
     padding: 0;
 
     color: #000000;
@@ -1606,6 +1637,7 @@ outline: none;
 li.prev-page {
     margin: 0;
     margin-right: auto;
+
 }
 
 li.next-page {
@@ -1615,11 +1647,15 @@ li.next-page {
 
 .pagination a {
     display: block;
-    padding: 0 30px;
 
     line-height: 70px;
     color: #000000;
     opacity: 0.3;
+}
+
+li.prev-page a,
+li.next-page a {
+    padding: 0 30px;
 }
 
 .pagination a:hover,
@@ -1628,11 +1664,16 @@ li.next-page {
     outline: none;
 }
 
+.pagination a:active {
+    opacity: 1;
+}
+
 .pagination a.active {
     opacity: 1;
 }
 
-.next-page .active:hover {
+.next-page:hover,
+.prev-page:hover {
     background-color: #d9d9d9;
 }
 

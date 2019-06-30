@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>HTML Academy: Девайс</title>
         <link href="css/normalize.css" rel="stylesheet">
-        <link href="css/style.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
         <header class="main-header container">
@@ -65,7 +65,7 @@
                         <label for="selfie-stick"></label>
                         <article class="slide slide-1">
                             <div class="column img-container">
-                                <img src="img/sliders/slider-1-png.png" alt="Селфи-палка">
+                                <img src="img/sliders/slider-1-png.png" width="384" height="486" alt="Селфи-палка">
                             </div>
                             <div class="column-right">
                                 <h2 class="title">
@@ -97,7 +97,7 @@
                         <label for="fitness-bracelet"></label>
                         <article class="slide slide-2">
                             <div class="column  img-container">
-                                <img src="img/sliders/slider-2-png.png" alt="фитнес-браслет">
+                                <img src="img/sliders/slider-2-png.png" width="345" height="485" alt="фитнес-браслет">
                             </div>
                             <div class="column-right">
                                 <h2 class="title">
@@ -125,7 +125,7 @@
                         <label for="quadrocopter"></label>
                         <article class="slide slide-3">
                             <div class="column  img-container">
-                                <img src="img/sliders/slider-3-png.png" alt="Квадрокоптер">
+                                <img src="img/sliders/slider-3-png.png" width="526" height="334" alt="Квадрокоптер">
                             </div>
                             <div class="column-right">
                                 <h2 class="title">
@@ -168,7 +168,7 @@
                             <div class="category">
                                 <img src="img/categories/popular-2.svg" width="86" height="158" alt="Моноподы для селфи">
                             </div>
-                            <b class="text-desc">Моноподы для селфи</b>
+                            <b class="text-desc">Моноподы<br>для селфи</b>
                         </a>
                     </li>
                     <li>
@@ -284,7 +284,7 @@
                 <section id="contacts" class="contacts column-right">
                     <h2 class="title">Контакты</h2>
                     <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-                    <img id="map-link" class="map" src="img/map-jpg.jpg" width="560" height="222" alt="карта">
+                    <a href="https://www.google.com/maps/place/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F+%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F+%D1%83%D0%BB.,+19,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+191186/@59.9387969,30.3208946,17z/data=!3m1!4b1!4m5!3m4!1s0x4696310fca5ba729:0xea9c53d4493c879f!8m2!3d59.9387942!4d30.3230833" class="map"><img id="map-link" src="img/map-jpg.jpg" width="560" height="222" alt="карта"></a>
                     <a id="contact-us-button" href="contact-us.html" class="btn">Напишите нам</a>
                 </section>
             </div>
@@ -315,7 +315,9 @@
                     <li><a href="#" class="insta" target="_blank">insta</a></li>
                     <li><a href="#" class="twitter" target="_blank">twitter</a></li>
                 </ul>
-                <a href="https://htmlacademy.ru/" target="_blank" class="development"></a>
+                <a href="https://htmlacademy.ru/" target="_blank" class="development">
+                    <span class="visually-hidden">Разработчик - HTML Academy</span>
+                </a>
             </div>
         </footer>
 

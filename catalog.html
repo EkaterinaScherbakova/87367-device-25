@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>HTML Academy: Девайс</title>
         <link href="css/normalize.css" rel="stylesheet">
-        <link href="css/style.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
     </head>
     <body class="catalog-page">
         <header class="main-header container">
@@ -74,7 +74,10 @@
                         <form action="https://htmlacademy.ru/echo">
                             <h3 class="text-desc">Стоимость</h3>
                             <div class="range-wrapper">
-                                <div class="range-line"></div>
+                                <div class="range-line">
+                                    <button type="button" class="range-button range-button-from"></button>
+                                    <button type="button" class="range-button range-button-to"></button>
+                                </div>
                                 <div class="range-output">
                                     <span>от</span>
                                     <input type="number" placeholder="0">
@@ -138,8 +141,12 @@
                                 <a href="#">По функционалу</a>
                             </div>
                             <div class="sorting-direction">
-                                <a href="#" class="direction direction-top active"></a>
-                                <a href="#" class="direction direction-bottom"></a>
+                                <a href="#" class="direction direction-top active">
+                                    <span class="visually-hidden">по возрастанию</span>
+                                </a>
+                                <a href="#" class="direction direction-bottom">
+                                    <span class="visually-hidden">по убыванию</span>
+                                </a>
                             </div>
                         </div>
 
@@ -170,7 +177,7 @@
                                     <img src="img/item/item-2-jpg.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
                                 </div>
                                 <div class="item-desc">
-                                    <h3 class="text-desc">Профессиональная селфи-палка</h3>
+                                    <h3 class="text-desc">Профессиональная<br>селфи-палка</h3>
                                     <span class="price">1 500 руб.</span>
                                 </div>
                             </li>
@@ -206,7 +213,7 @@
                             </li>
                         </ul>
                         <ul class="text-desc-upper pagination">
-                            <li class="prev-page"><a href="#">Назад</a></li>
+                            <li class="prev-page"><a class="active" href="#">Назад</a></li>
                             <li><a class="active" href="#">1</a></li>
                             <li><a href="#">2</a></li>
                             <li><a href="#">3</a></li>
@@ -217,7 +224,7 @@
             </div>
             <footer class="main-footer">
                 <div class="footer-top container">
-                    <a class="logo">
+                    <a href="index.html" class="logo">
                         <img src="img/device-yellow.svg" width="163" height="35" alt="DEVICE">
                     </a>
                     <div class="profile-actions footer-actions">
@@ -242,7 +249,9 @@
                         <li><a href="#" class="insta" target="_blank">insta</a></li>
                         <li><a href="#" class="twitter" target="_blank">twitter</a></li>
                     </ul>
-                    <a href="https://htmlacademy.ru/" target="_blank" class="development"></a>
+                    <a href="https://htmlacademy.ru/" target="_blank" class="development">
+                        <span class="visually-hidden">Разработчик - HTML Academy</span>
+                    </a>
                 </div>
             </footer>
         </main>
